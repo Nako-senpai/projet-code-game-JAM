@@ -51,6 +51,9 @@
     <ClCompile Include="ui.c">
       <Filter>Fichiers sources\system</Filter>
     </ClCompile>
+    <ClCompile Include="game.c">
+      <Filter>Fichiers sources\system</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h">
@@ -72,6 +75,9 @@
       <Filter>Fichiers d%27en-tête\system</Filter>
     </ClInclude>
     <ClInclude Include="ui.h">
+      <Filter>Fichiers d%27en-tête\system</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
       <Filter>Fichiers d%27en-tête\system</Filter>
     </ClInclude>
   </ItemGroup>
