@@ -17,9 +17,9 @@
 mono_crash.*
 
 # Build results
-[Dd]ebug/
+
 [Dd]ebugPublic/
-[Rr]elease/
+
 [Rr]eleases/
 x86/
 [Ww][Ii][Nn]32/
@@ -31,6 +31,15 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+
+# Ignorer uniquement les fichiers binaires générés
+[Dd]ebug/*.exe
+[Dd]ebug/*.obj
+[Dd]ebug/*.pdb
+[Rr]elease/*.exe
+[Rr]elease/*.obj
+[Rr]elease/*.pdb
+
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
