@@ -17,6 +17,7 @@ void initGame(Game* game)
 	initGrid(&game->grid, bordY);
 	newCrabe();
 }
+
 void handleEvent(Game* game)
 {
 	sfEvent event;

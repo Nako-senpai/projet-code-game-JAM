@@ -13,9 +13,10 @@ void ATH(sfRenderWindow* window)
 
 sfSprite* createSnowmanIcone(float _x, float _y)
 {
-	sfTexture* snowman_texture = sfTexture_createFromFile("assets/Sprites/snowmen.png", NULL);
+	sfTexture* snowman_texture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
 	sfSprite* snowman = sfSprite_create();
 	sfSprite_setTexture(snowman, snowman_texture, sfTrue);
 	sfSprite_setPosition(snowman, (sfVector2f) { _x, _y });
 	return snowman;
+	
 }
