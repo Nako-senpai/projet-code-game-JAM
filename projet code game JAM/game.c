@@ -14,28 +14,26 @@ void initGame(Game* game)
 	game->snowmanSelected = sfFalse;
 	game->snowmanIconeMouse = NULL;
 
-	initGrid(&game->grid);
+	initGrid(&game->grid, bordY);
 	newCrabe();
 }
 void handleEvent(Game* game)
 {
 	sfEvent event;
-	while (sfRenderWindow_isOpen(game->window))
-	{
-		while (sfRenderWindow_pollEvent(game->window, &event))
-		{
-			if (event.type == sfEvtClosed)
-				sfRenderWindow_close(game->window);
-			if (event.type == sfEvtMouseButtonPressed)
-			{
-				Cell* idCell = getIdCase(game->window, &grid);
-				if (idCell != NULL)
-				{
-					idCell->mousePressed = sfTrue;
-				}
 
-				game->mousePressed = sfTrue;
+	while (sfRenderWindow_pollEvent(game->window, &event))
+	{
+		if (event.type == sfEvtClosed)
+			sfRenderWindow_close(game->window);
+		if (event.type == sfEvtMouseButtonPressed)
+		{
+			Cell* idCell = getIdCase(game->window, &game->grid);
+			if (idCell != NULL)
+			{
+				idCell->mousePressed = sfTrue;
 			}
+
+			game->mousePressed = sfTrue;
 		}
 	}
 }
@@ -71,7 +69,7 @@ void updateGame(Game* game)
 		game->snowmanIconeMouse = createSnowmanIcone((float)mouse.x, (float)mouse.y);
 		if (game->mousePressed)
 		{
-			snowmanSpawn(game->window, &grid, game->mousePressed);
+			snowmanSpawn(game->window, &game->grid, game->mousePressed);
 			game->snowmanSelected = sfFalse;
 			sfSprite_setPosition(game->snowmanIconeMouse, (sfVector2f) { -100, -100 });
 		}
@@ -87,7 +85,7 @@ void updateGame(Game* game)
 
 
 	crabeHurt();
-	snowmanHurt();
+	snowmanHurt(&game->grid);
 	updateCrabeMouvement();
 	updateSnowball();
 
@@ -97,5 +95,37 @@ void updateGame(Game* game)
 
 void drawGame(Game* game)
 {
+	sfRenderWindow_clear(game->window, sfBlue);
+	ATH(game->window);
 
+	if (game->snowmanIconeMouse != NULL)
+		sfRenderWindow_drawSprite(game->window, game->snowmanIconeMouse, NULL);
+
+	for (int i = 0; i < nbSnowmen; i++)
+	{
+		if (tableauSnowmen[i]->alive)
+		{
+			sfRenderWindow_drawSprite(game->window, tableauSnowmen[i]->sprite, NULL);
+		}
+	}
+
+	for (int i = 0; i < nbSnowball; i++)
+	{
+		if (tableauSnowball[i]->active)
+			sfRenderWindow_drawSprite(game->window, tableauSnowball[i]->sprite, NULL);
+	}
+
+	for (int i = 0; i < nbCrabe; i++)
+	{
+		if (tableauCrabe[i]->active)
+			sfRenderWindow_drawSprite(game->window, tableauCrabe[i]->sprite, NULL);
+	}
+
+	drawGrid(game->window, &game->grid, game->mousePressed);
+	sfRenderWindow_display(game->window);
+}
+
+void cleanupGame(Game* game)
+{
+	sfRenderWindow_destroy(game->window);
 }

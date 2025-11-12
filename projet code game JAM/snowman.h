@@ -1,5 +1,6 @@
 #ifndef SNOWMAN_H
 #define SNOWMAN_H
+#include "grid.h"
 #include <SFML/Graphics.h>
 
 typedef struct

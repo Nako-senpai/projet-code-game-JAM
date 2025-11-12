@@ -19,7 +19,7 @@ typedef struct {
 }Game;
 
 void initGame(Game* game);
-void handleEvents(Game* game);
+void handleEvent(Game* game);
 void updateGame(Game* game);
 void drawGame(Game* game);
 void cleanupGame(Game* game);
