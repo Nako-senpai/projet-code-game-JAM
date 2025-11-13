@@ -90,12 +90,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\lib\msvc;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\include;$(IncludePath)
+</IncludePath>
+    <LibraryPath>$(ProjectDir)..\lib\msvc;$(LibraryPath)
+</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\lib\msvc;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\include;$(IncludePath)
+</IncludePath>
+    <LibraryPath>$(ProjectDir)..\lib\msvc;$(LibraryPath)
+</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
