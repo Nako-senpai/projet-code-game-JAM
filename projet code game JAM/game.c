@@ -17,7 +17,7 @@ void initGame(Game* game, Money* money)
 	game->snowmanTexture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
 	game->snowmanIcone = sfSprite_create();
 	sfSprite_setTexture(game->snowmanIcone, game->snowmanTexture, sfTrue);
-	sfSprite_setPosition(game->snowmanIcone, (sfVector2f) { 1000, 10 });
+	sfSprite_setPosition(game->snowmanIcone, (sfVector2f) { 1000, 110 });
 
 	moneyInit(money, 100);
 	printf("%d", moneyGet(money));
@@ -50,7 +50,7 @@ void handleEvent(Game* game)
 void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID)
 {
 
-	sfSprite* snowmanIcone = createSnowmanIcone(iconeID, 1000, 10);
+	sfSprite* snowmanIcone = createSnowmanIcone(iconeID, 1000, 110);
 	sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
 	sfFloatRect snowman_bounds = sfSprite_getGlobalBounds(snowmanIcone);
 
@@ -119,10 +119,12 @@ void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID)
 	game->mousePressed = sfFalse;
 }
 
-void drawGame(Game* game)
+void drawGame(Game* game, Money* money)
 {
 	sfRenderWindow_clear(game->window, sfBlue);
 	ATH(game->window);
+
+	drawMoney(game->window, money);
 	sfRenderWindow_drawSprite(game->window, game->snowmanIcone, NULL);
 	if (game->snowmanIconeMouse != NULL)
 		sfRenderWindow_drawSprite(game->window, game->snowmanIconeMouse, NULL);
