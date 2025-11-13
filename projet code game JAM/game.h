@@ -16,6 +16,8 @@ typedef struct {
 	sfBool mousePressed;
 	sfBool snowmanSelected;
 	sfSprite* snowmanIconeMouse;
+	sfSprite* snowmanIcone;
+	sfTexture* snowmanTexture;
 }Game;
 
 void initGame(Game* game);

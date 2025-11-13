@@ -30,9 +30,6 @@
     <ClCompile Include="main.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="test.c">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="crabe.c">
       <Filter>Fichiers sources\entity</Filter>
     </ClCompile>
@@ -56,9 +53,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="test.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="crabe.h">
       <Filter>Fichiers d%27en-tête\entity</Filter>
     </ClInclude>

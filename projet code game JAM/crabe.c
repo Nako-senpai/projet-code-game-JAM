@@ -49,7 +49,7 @@ void newCrabe()
 	newCrabe->damage = 50;
 	newCrabe->alive = sfTrue;
 	newCrabe->active = sfTrue;
-	newCrabe->velocity = (sfVector2f){ 0.0f,1.9f };
+	newCrabe->velocity = (sfVector2f){ 0.0f,0.5f };
 	newCrabe->position = sfSprite_getPosition(newCrabe->sprite);
 
 	newCrabe->clock = sfClock_create();

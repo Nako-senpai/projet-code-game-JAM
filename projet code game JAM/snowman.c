@@ -98,7 +98,7 @@ void snowmanHurt(Grid* grid)
 				if (tableauSnowmen[j]->hp <= 0)
 				{
 					tableauSnowmen[j]->alive = sfFalse;
-					tableauCrabe[i]->velocity = (sfVector2f){ 0.0f,0.9f };
+					tableauCrabe[i]->velocity = (sfVector2f){ 0.0f,0.5f };
 				}
 			}
 

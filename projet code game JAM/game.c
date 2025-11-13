@@ -14,6 +14,12 @@ void initGame(Game* game)
 	game->snowmanSelected = sfFalse;
 	game->snowmanIconeMouse = NULL;
 
+
+	game->snowmanTexture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
+	game->snowmanIcone = sfSprite_create();
+	sfSprite_setTexture(game->snowmanIcone, game->snowmanTexture, sfTrue);
+	sfSprite_setPosition(game->snowmanIcone, (sfVector2f) { 1000, 10 });
+
 	initGrid(&game->grid, bordY);
 	newCrabe();
 }
@@ -98,7 +104,7 @@ void drawGame(Game* game)
 {
 	sfRenderWindow_clear(game->window, sfBlue);
 	ATH(game->window);
-
+	sfRenderWindow_drawSprite(game->window, game->snowmanIcone, NULL);
 	if (game->snowmanIconeMouse != NULL)
 		sfRenderWindow_drawSprite(game->window, game->snowmanIconeMouse, NULL);
 
@@ -128,5 +134,12 @@ void drawGame(Game* game)
 
 void cleanupGame(Game* game)
 {
+	if (game->snowmanIcone)
+		sfSprite_destroy(game->snowmanIcone);
+	if (game->snowmanIconeMouse)
+		sfSprite_destroy(game->snowmanIconeMouse);
+	if (game->snowmanTexture)
+		sfTexture_destroy(game->snowmanTexture);
+
 	sfRenderWindow_destroy(game->window);
 }

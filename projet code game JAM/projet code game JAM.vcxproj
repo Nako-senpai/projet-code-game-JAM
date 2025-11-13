@@ -26,7 +26,6 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="snowball.c" />
     <ClCompile Include="snowman.c" />
-    <ClCompile Include="test.c" />
     <ClCompile Include="ui.c" />
   </ItemGroup>
   <ItemGroup>
@@ -36,7 +35,6 @@
     <ClInclude Include="grid.h" />
     <ClInclude Include="snowball.h" />
     <ClInclude Include="snowman.h" />
-    <ClInclude Include="test.h" />
     <ClInclude Include="ui.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -92,12 +90,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet safe codegame JAM\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet safe codegame JAM\lib\msvc;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\lib\msvc;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet safe codegame JAM\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet safe codegame JAM\lib\msvc;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\lib\msvc;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
