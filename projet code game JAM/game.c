@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void initGame(Game* game)
+void initGame(Game* game, Money* money)
 {
 	srand(time(NULL));
 	float bordX = 1100;
@@ -14,11 +14,13 @@ void initGame(Game* game)
 	game->snowmanSelected = sfFalse;
 	game->snowmanIconeMouse = NULL;
 
-
 	game->snowmanTexture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
 	game->snowmanIcone = sfSprite_create();
 	sfSprite_setTexture(game->snowmanIcone, game->snowmanTexture, sfTrue);
 	sfSprite_setPosition(game->snowmanIcone, (sfVector2f) { 1000, 10 });
+
+	moneyInit(money, 100);
+	printf("%d", moneyGet(money));
 
 	initGrid(&game->grid, bordY);
 	newCrabe();
@@ -45,9 +47,10 @@ void handleEvent(Game* game)
 	}
 }
 
-void updateGame(Game* game)
+void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID)
 {
-	sfSprite* snowmanIcone = createSnowmanIcone(1000, 10);
+
+	sfSprite* snowmanIcone = createSnowmanIcone(iconeID, 1000, 10);
 	sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
 	sfFloatRect snowman_bounds = sfSprite_getGlobalBounds(snowmanIcone);
 
@@ -60,25 +63,41 @@ void updateGame(Game* game)
 
 		if (pixelColor.a != 0)
 		{
-			printf("%d %d %d\n", pixelColor.r, pixelColor.g, pixelColor.b);
-			printf("cette zone marche\n");
-			printf("cette zone marche aussi\n");
 			if (game->mousePressed)
 			{
-				game->snowmanSelected = sfTrue;
-				printf("cette zone marche\n");
+				printf("%d  ", iconeID->count);
+				printf("%d\n", money->amount);
+				if (money->amount >= iconeID->count)
+				{
+					game->snowmanSelected = sfTrue;
+					printf("cette zone marche\n");
+				}
+				else
+				{
+					printf("quantité insuffisante\n");
+				}
 			}
 			game->mousePressed = sfFalse;
 		}
 	}
 	if (game->snowmanSelected)
 	{
-		game->snowmanIconeMouse = createSnowmanIcone((float)mouse.x, (float)mouse.y);
+		game->snowmanIconeMouse = createSnowmanIcone(iconeID, (float)mouse.x, (float)mouse.y);
 		if (game->mousePressed)
 		{
-			snowmanSpawn(game->window, &game->grid, game->mousePressed);
-			game->snowmanSelected = sfFalse;
-			sfSprite_setPosition(game->snowmanIconeMouse, (sfVector2f) { -100, -100 });
+			{
+				Cell* cell = getIdCase(game->window, &game->grid);
+				if (cell != NULL && !cell->occupied)
+				{
+					snowmanSpawn(game->window, &game->grid, game->mousePressed);
+					moneySpend(money, iconeID->count);
+					printf("%d", moneyGet(money));
+
+				}
+				game->snowmanSelected = sfFalse;
+				sfSprite_setPosition(game->snowmanIconeMouse, (sfVector2f) { -100, -100 });
+
+			}
 		}
 	}
 	for (int i = 0; i < nbSnowmen; i++)
@@ -91,7 +110,7 @@ void updateGame(Game* game)
 	}
 
 
-	crabeHurt();
+	crabeHurt(money);
 	snowmanHurt(&game->grid);
 	updateCrabeMouvement();
 	updateSnowball();

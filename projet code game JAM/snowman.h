@@ -3,6 +3,7 @@
 #include "grid.h"
 #include <SFML/Graphics.h>
 
+
 typedef struct
 {
 	sfSprite* sprite;

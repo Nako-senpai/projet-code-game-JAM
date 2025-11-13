@@ -1,6 +1,7 @@
 #include "crabe.h"
 #include "snowball.h"
 #include "snowman.h"
+#include "money.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -47,6 +48,7 @@ void newCrabe()
 	sfSprite_setOrigin(newCrabe->sprite, (sfVector2f) { size.x / 2.0f, size.y / 2.0f });
 	newCrabe->hp = 100;
 	newCrabe->damage = 50;
+	newCrabe->price = 25;
 	newCrabe->alive = sfTrue;
 	newCrabe->active = sfTrue;
 	newCrabe->velocity = (sfVector2f){ 0.0f,0.5f };
@@ -98,7 +100,7 @@ void spawnCrabe(Crabe* crabeID)
 	}
 }
 
-void crabeHurt()
+void crabeHurt(Money* money)
 {
 	for (int i = 0; i < nbCrabe; i++)
 	{
@@ -116,6 +118,8 @@ void crabeHurt()
 				if (tableauCrabe[i]->hp <= 0)
 				{
 					tableauCrabe[i]->alive = sfFalse;
+					moneyAdd(money, tableauCrabe[i]->price);
+					printf("+25!\n");
 				}
 			}
 

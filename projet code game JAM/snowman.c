@@ -42,6 +42,9 @@ void newSnowman()
 	newSnowman->cooldown = 100.0f;
 	newSnowman->timer = 0.0f;
 
+	//le cost n'est pas associé au snwoman créé mais au snowmanIcone
+
+
 	nbSnowmen++;
 	tableauSnowmen = realloc(tableauSnowmen, nbSnowmen * sizeof(Snowman*));
 	tableauSnowmen[nbSnowmen - 1] = newSnowman;

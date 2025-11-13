@@ -11,12 +11,14 @@ void ATH(sfRenderWindow* window)
 	sfRenderWindow_drawRectangleShape(window, ATH, NULL);
 }
 
-sfSprite* createSnowmanIcone(float _x, float _y)
+
+sfSprite* createSnowmanIcone(SnowmanIconeID* iconeID, float _x, float _y)
 {
 	sfTexture* snowman_texture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
 	sfSprite* snowman = sfSprite_create();
 	sfSprite_setTexture(snowman, snowman_texture, sfTrue);
 	sfSprite_setPosition(snowman, (sfVector2f) { _x, _y });
+	iconeID->count = 25;
 	return snowman;
 	
 }

@@ -2,7 +2,11 @@
 #define UI_H
 #include <SFML/Graphics.h>
 
+typedef struct
+{
+	int count;
+}SnowmanIconeID;
 
 void ATH(sfRenderWindow* window);
-sfSprite* createSnowmanIcone(float _x, float _y);
+sfSprite* createSnowmanIcone(SnowmanIconeID* iconeID, float _x, float _y);
 #endif

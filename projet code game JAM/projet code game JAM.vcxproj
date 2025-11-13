@@ -24,6 +24,7 @@
     <ClCompile Include="game.c" />
     <ClCompile Include="grid.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="money.c" />
     <ClCompile Include="snowball.c" />
     <ClCompile Include="snowman.c" />
     <ClCompile Include="ui.c" />
@@ -33,6 +34,7 @@
     <ClInclude Include="crabe.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="grid.h" />
+    <ClInclude Include="money.h" />
     <ClInclude Include="snowball.h" />
     <ClInclude Include="snowman.h" />
     <ClInclude Include="ui.h" />

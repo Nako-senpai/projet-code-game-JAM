@@ -6,12 +6,16 @@
 int main(void)
 {
     Game game;
-    initGame(&game);
+    Money money;
+    SnowmanIconeID iconeID;
+
+
+    initGame(&game, &money);
 
     while (sfRenderWindow_isOpen(game.window))
     {
         handleEvent(&game);
-        updateGame(&game);
+        updateGame(&game, &money, &iconeID);
         drawGame(&game);
     }
 

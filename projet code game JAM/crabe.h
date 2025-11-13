@@ -20,6 +20,7 @@ typedef struct
 	sfClock* attakClock;
 	float attakCooldown;
 	float attakTimer;
+	int price;
 }Crabe;
 
 

@@ -9,6 +9,7 @@
 #include "snowball.h"
 #include "ui.h"
 #include "collision.h"
+#include "money.h"
 
 typedef struct {
 	sfRenderWindow* window;
@@ -20,9 +21,9 @@ typedef struct {
 	sfTexture* snowmanTexture;
 }Game;
 
-void initGame(Game* game);
+void initGame(Game* game, Money* money);
 void handleEvent(Game* game);
-void updateGame(Game* game);
+void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID);
 void drawGame(Game* game);
 void cleanupGame(Game* game);
 
