@@ -9,7 +9,7 @@ typedef struct
 }SnowmanIconeID;
 
 void ATH(sfRenderWindow* window);
-sfSprite* createSnowmanIcone(SnowmanIconeID* iconeID, float _x, float _y);
+sfSprite* createSnowmanIcone( sfTexture* texture, float _x, float _y);
 void drawMoney(sfRenderWindow* window, Money* money);
 
 #endif

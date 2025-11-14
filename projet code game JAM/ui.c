@@ -9,15 +9,15 @@ void ATH(sfRenderWindow* window)
 	sfRectangleShape_setFillColor(ATH, sfGreen);
 	sfRectangleShape_setPosition(ATH, (sfVector2f) { 1000, 0 });
 	sfRenderWindow_drawRectangleShape(window, ATH, NULL);
+	sfRectangleShape_destroy(ATH);
 }
 
-sfSprite* createSnowmanIcone(SnowmanIconeID* iconeID, float _x, float _y)
-{
-	sfTexture* snowman_texture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
+sfSprite* createSnowmanIcone(sfTexture* texture, float _x, float _y)
+{	
 	sfSprite* snowman = sfSprite_create();
-	sfSprite_setTexture(snowman, snowman_texture, sfTrue);
+	sfSprite_setTexture(snowman, texture, sfFalse);
 	sfSprite_setPosition(snowman, (sfVector2f) { _x, _y });
-	iconeID->count = 25;
+
 	return snowman;
 	
 }
@@ -41,8 +41,9 @@ void drawMoney(sfRenderWindow* window, Money* money)
 		sfText_setFillColor(text, sfBlack);
 		sfText_setPosition(text, (sfVector2f) { 1010, 60 });
 	}
-	char buffer[32];
-	sprintf_s(buffer, sizeof(buffer), "$ %d", money->amount);
+	char buffer[64];
+	sprintf_s(buffer, sizeof(buffer), "$ %d", moneyGet(money));
+	//printf("%d\n", moneyGet(money));
 	sfText_setString(text, buffer);
 
 	sfRenderWindow_drawText(window, text, NULL);

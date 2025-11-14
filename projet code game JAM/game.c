@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void initGame(Game* game, Money* money)
+void initGame(Game* game, Money* money, SnowmanIconeID* iconeID)
 {
 	srand(time(NULL));
 	float bordX = 1100;
@@ -15,10 +15,8 @@ void initGame(Game* game, Money* money)
 	game->snowmanIconeMouse = NULL;
 
 	game->snowmanTexture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
-	game->snowmanIcone = sfSprite_create();
-	sfSprite_setTexture(game->snowmanIcone, game->snowmanTexture, sfTrue);
-	sfSprite_setPosition(game->snowmanIcone, (sfVector2f) { 1000, 110 });
-
+	game->snowmanIcone = createSnowmanIcone( game->snowmanTexture, 1000, 110);
+	iconeID->count = 25;
 	moneyInit(money, 100);
 	printf("%d", moneyGet(money));
 
@@ -49,14 +47,12 @@ void handleEvent(Game* game)
 
 void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID)
 {
-
-	sfSprite* snowmanIcone = createSnowmanIcone(iconeID, 1000, 110);
 	sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
-	sfFloatRect snowman_bounds = sfSprite_getGlobalBounds(snowmanIcone);
+	sfFloatRect snowman_bounds = sfSprite_getGlobalBounds(game->snowmanIcone);
 
 	if (sfFloatRect_contains(&snowman_bounds, (float)mouse.x, (float)mouse.y))
 	{
-		sfTexture* snowmanTexture = sfSprite_getTexture(snowmanIcone);
+		sfTexture* snowmanTexture = sfSprite_getTexture(game->snowmanIcone);
 		sfImage* snowmanImage = sfTexture_copyToImage(snowmanTexture);
 		sfVector2u pixelPos = { mouse.x - snowman_bounds.left ,mouse.y - snowman_bounds.top };
 		sfColor pixelColor = sfImage_getPixel(snowmanImage, pixelPos.x, pixelPos.y);
@@ -82,7 +78,11 @@ void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID)
 	}
 	if (game->snowmanSelected)
 	{
-		game->snowmanIconeMouse = createSnowmanIcone(iconeID, (float)mouse.x, (float)mouse.y);
+		if(game->snowmanIconeMouse == NULL)
+		{
+			game->snowmanIconeMouse = createSnowmanIcone(game->snowmanTexture, 1000, 110);
+		}
+		sfSprite_setPosition(game->snowmanIconeMouse, (sfVector2f) { (float)mouse.x, (float)mouse.y });
 		if (game->mousePressed)
 		{
 			{
@@ -152,6 +152,22 @@ void drawGame(Game* game, Money* money)
 	drawGrid(game->window, &game->grid, game->mousePressed);
 	sfRenderWindow_display(game->window);
 }
+
+void updateMenu(Game* game)
+{
+	if (sfKeyboard_isKeyPressed(sfKeyA))
+	{
+		game->state = PLAYING;
+	}
+}
+
+void drawMenu(Game* game)
+{
+	sfRenderWindow_clear(game->window, sfBlack);
+	sfRenderWindow_display(game->window);
+}
+
+
 
 void cleanupGame(Game* game)
 {

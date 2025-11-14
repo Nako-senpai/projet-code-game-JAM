@@ -12,7 +12,7 @@ float randomeLinesSpawn()
 {
 	float randomLine = 0;
 
-	randomLine = (((rand() % 10) + 1) * 100) - 50;
+	randomLine = (((rand() % 1) + 1) * 100) - 50;
 	return randomLine;
 }
 
@@ -55,7 +55,7 @@ void newCrabe()
 	newCrabe->position = sfSprite_getPosition(newCrabe->sprite);
 
 	newCrabe->clock = sfClock_create();
-	newCrabe->cooldown = 1000.0f;
+	newCrabe->cooldown = 100.0f;
 	newCrabe->timer = 0.0f;
 
 	newCrabe->attakClock = sfClock_create();
@@ -81,6 +81,33 @@ void updateCrabeMouvement()
 				freeCrabe(i);
 				i--;
 			}
+		}
+	}
+
+	for (int i = 0; i < nbCrabe; i++)
+	{
+		int isColliding = 0;
+
+		for (int j = 0; j < nbSnowmen; j++)
+		{
+			if (!tableauCrabe[i]->active)
+				continue;
+			if (!tableauSnowmen[j]->alive)
+				continue;
+
+			if (pixelPerfectCollision(tableauSnowmen[j]->sprite, tableauSnowmen[j]->image, tableauCrabe[i]->sprite, tableauCrabe[i]->image))
+			{
+				isColliding = 1;
+				break;
+			}
+		}
+		if (isColliding)
+		{
+			tableauCrabe[i]->velocity = (sfVector2f){ 0, 0 };
+		}
+		else
+		{
+			tableauCrabe[i]->velocity = (sfVector2f){ 0, 0.5f };
 		}
 	}
 }

@@ -23,7 +23,7 @@ extern int nbSnowmen;
 
 void freeSnowmen(Grid* grid, int _i);
 void newSnowman(void);
-sfSprite* createSnowmanIcone(float _x, float _y);
+sfSprite* createSnowmanIcone(sfTexture* texture,float _x, float _y);
 void updateSnowmanAttack(Snowman* snowmanID);
 void snowmanHurt(Grid* grid);
 #endif
