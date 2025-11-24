@@ -2,6 +2,7 @@
 #include "snowball.h"
 #include "snowman.h"
 #include "money.h"
+#include "ui.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -12,7 +13,7 @@ float randomeLinesSpawn()
 {
 	float randomLine = 0;
 
-	randomLine = (((rand() % 1) + 1) * 100) - 50;
+	randomLine = (((rand() % 10) + 1) * 100) - 50;
 	return randomLine;
 }
 
@@ -46,16 +47,17 @@ void newCrabe()
 	sfSprite_setPosition(newCrabe->sprite, (sfVector2f) { randomeLinesSpawn(), -50 });
 	sfVector2u size = sfTexture_getSize(crabe_texture);
 	sfSprite_setOrigin(newCrabe->sprite, (sfVector2f) { size.x / 2.0f, size.y / 2.0f });
+	sfSprite_setScale(newCrabe->sprite, (sfVector2f) { 3, 3 });
 	newCrabe->hp = 100;
 	newCrabe->damage = 50;
 	newCrabe->price = 25;
 	newCrabe->alive = sfTrue;
 	newCrabe->active = sfTrue;
-	newCrabe->velocity = (sfVector2f){ 0.0f,0.5f };
+	newCrabe->velocity = (sfVector2f){ 0.0f,10.5f };
 	newCrabe->position = sfSprite_getPosition(newCrabe->sprite);
 
 	newCrabe->clock = sfClock_create();
-	newCrabe->cooldown = 100.0f;
+	newCrabe->cooldown = 1000.0f;
 	newCrabe->timer = 0.0f;
 
 	newCrabe->attakClock = sfClock_create();
@@ -67,7 +69,7 @@ void newCrabe()
 	tableauCrabe[nbCrabe - 1] = newCrabe;
 }
 
-void updateCrabeMouvement()
+void updateCrabeMouvement(HP* hp)
 {
 	for (int i = 0; i < nbCrabe; i++)
 	{
@@ -78,6 +80,7 @@ void updateCrabeMouvement()
 
 			if (tableauCrabe[i]->position.y > 1200)
 			{
+				hp->life -= 1;
 				freeCrabe(i);
 				i--;
 			}
@@ -107,7 +110,7 @@ void updateCrabeMouvement()
 		}
 		else
 		{
-			tableauCrabe[i]->velocity = (sfVector2f){ 0, 0.5f };
+			tableauCrabe[i]->velocity = (sfVector2f){ 0, 0.3f };
 		}
 	}
 }

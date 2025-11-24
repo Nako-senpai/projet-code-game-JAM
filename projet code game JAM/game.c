@@ -3,22 +3,27 @@
 #include <stdlib.h>
 #include <time.h>
 
-void initGame(Game* game, Money* money, SnowmanIconeID* iconeID)
+void initGame(Game* game, Money* money, SnowmanIconeID* iconeID, HP* hp)
 {
 	srand(time(NULL));
 	float bordX = 1100;
 	float bordY = 1080;
 	sfVideoMode videoMode = { bordX, bordY, 32 };
 	game->window = sfRenderWindow_create(videoMode, "sprite", sfDefaultStyle, NULL);
+	sfRenderWindow_setFramerateLimit(game->window, 60);
 	game->mousePressed = sfFalse;
 	game->snowmanSelected = sfFalse;
 	game->snowmanIconeMouse = NULL;
-
 	game->snowmanTexture = sfTexture_createFromFile("assets/Sprites/Snowmen.png", NULL);
 	game->snowmanIcone = createSnowmanIcone( game->snowmanTexture, 1000, 110);
 	iconeID->count = 25;
 	moneyInit(money, 100);
 	printf("%d", moneyGet(money));
+	hp->life = 3;
+	game->fond = sfTexture_createFromFile("assets/Sprites/fond.png", NULL);
+	game->backScreen = sfSprite_create();
+	sfSprite_setTexture(game->backScreen, game->fond, NULL);
+	sfSprite_setScale(game->backScreen, (sfVector2f) { 3, 3 });
 
 	initGrid(&game->grid, bordY);
 	newCrabe();
@@ -45,7 +50,7 @@ void handleEvent(Game* game)
 	}
 }
 
-void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID)
+void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID, HP* hp)
 {
 	sfVector2i mouse = sfMouse_getPositionRenderWindow(game->window);
 	sfFloatRect snowman_bounds = sfSprite_getGlobalBounds(game->snowmanIcone);
@@ -112,18 +117,19 @@ void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID)
 
 	crabeHurt(money);
 	snowmanHurt(&game->grid);
-	updateCrabeMouvement();
+	updateCrabeMouvement(hp);
 	updateSnowball();
 
 
 	game->mousePressed = sfFalse;
 }
 
-void drawGame(Game* game, Money* money)
+void drawGame(Game* game, Money* money, HP* hp)
 {
 	sfRenderWindow_clear(game->window, sfBlue);
 	ATH(game->window);
-
+	
+	sfRenderWindow_drawSprite(game->window, game->backScreen, NULL);
 	drawMoney(game->window, money);
 	sfRenderWindow_drawSprite(game->window, game->snowmanIcone, NULL);
 	if (game->snowmanIconeMouse != NULL)
@@ -149,7 +155,8 @@ void drawGame(Game* game, Money* money)
 			sfRenderWindow_drawSprite(game->window, tableauCrabe[i]->sprite, NULL);
 	}
 
-	drawGrid(game->window, &game->grid, game->mousePressed);
+	//drawGrid(game->window, &game->grid, game->mousePressed);
+	life(game->window, hp);
 	sfRenderWindow_display(game->window);
 }
 
@@ -163,7 +170,33 @@ void updateMenu(Game* game)
 
 void drawMenu(Game* game)
 {
+
 	sfRenderWindow_clear(game->window, sfBlack);
+
+	static sfFont* fontMenue = NULL;
+	static sfText* textMenue = NULL;
+	if (fontMenue == NULL)
+	{
+		fontMenue = sfFont_createFromFile("assets/Font/arial.ttf");
+		if (!fontMenue)
+		{
+			printf("erreur chargement police");
+			return;
+		}
+		textMenue = sfText_create();
+		sfText_setFont(textMenue, fontMenue);
+		sfText_setCharacterSize(textMenue, 50);
+		sfText_setFillColor(textMenue, sfWhite);
+		sfText_setPosition(textMenue, (sfVector2f) { 400, 550 });
+	}
+	char buffer[64];
+	sprintf_s(buffer, sizeof(buffer), "Press A for start");
+	sfText_setString(textMenue, buffer);
+
+	sfRenderWindow_drawText(game->window, textMenue, NULL);
+
+
+	
 	sfRenderWindow_display(game->window);
 }
 

@@ -1,5 +1,6 @@
 #ifndef CRABE_H
 #define CRABE_H
+#include "ui.h"
 #include <SFML/Graphics.h>
 
 
@@ -29,7 +30,7 @@ extern int nbCrabe;
 
 void newCrabe(void);
 void freeCrabe(int _i);
-void updateCrabeMouvement(void);
+void updateCrabeMouvement(HP* hp);
 void spawnCrabe(Crabe* crabeID);
 void crabeHurt();
 void crabeAttak(int _i, int _j);

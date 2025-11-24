@@ -28,7 +28,7 @@ void SnowmanAttack(Snowman* snowmanID)
 	sfSprite_setTexture(newSnowball->sprite, snowballtexture, sfTrue);
 	newSnowball->image = sfTexture_copyToImage(snowballtexture);
 	sfSprite_setOrigin(newSnowball->sprite, (sfVector2f) { 0, 0 });
-	sfSprite_setScale(newSnowball->sprite, (sfVector2f) { 1, -1 });
+	sfSprite_setScale(newSnowball->sprite, (sfVector2f) { 2, -2 });
 	newSnowball->position = sfSprite_getPosition(snowmanID->sprite);
 	sfSprite_setPosition(newSnowball->sprite, newSnowball->position);
 	newSnowball->velocity = (sfVector2f){ 0.0f,3.0f };

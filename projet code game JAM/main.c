@@ -8,10 +8,11 @@ int main(void)
     Game game;
     Money money;
     SnowmanIconeID iconeID;
+    HP hp;
 
     game.state = MENUE;
 
-    initGame(&game, &money, &iconeID);
+    initGame(&game, &money, &iconeID, &hp);
 
     while (sfRenderWindow_isOpen(game.window)) 
     {
@@ -24,8 +25,8 @@ int main(void)
         }
         if (game.state == PLAYING)
         {
-            updateGame(&game, &money, &iconeID);
-            drawGame(&game, &money);
+            updateGame(&game, &money, &iconeID, &hp);
+            drawGame(&game, &money, &hp);
         }
     }
 

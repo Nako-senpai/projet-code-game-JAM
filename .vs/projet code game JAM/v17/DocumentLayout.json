@@ -1,0 +1,239 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\ui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\ui.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\ui.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\crabe.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\crabe.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowball.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\snowball.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowman.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\snowman.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\crabe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\crabe.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\snowman.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\collision.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\collision.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\collision.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\money.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{37D193E5-643A-4802-B5CA-3A8FD7E2DC30}|projet code game JAM\\projet code game JAM.vcxproj|solutionrelative:projet code game JAM\\money.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 93,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "game.h",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\game.h",
+              "RelativeDocumentMoniker": "projet code game JAM\\game.h",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\game.h",
+              "RelativeToolTip": "projet code game JAM\\game.h",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAC4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-13T08:23:17.359Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ui.h",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\ui.h",
+              "RelativeDocumentMoniker": "projet code game JAM\\ui.h",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\ui.h",
+              "RelativeToolTip": "projet code game JAM\\ui.h",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-13T10:35:51.427Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "collision.c",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\collision.c",
+              "RelativeDocumentMoniker": "projet code game JAM\\collision.c",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\collision.c",
+              "RelativeToolTip": "projet code game JAM\\collision.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-17T14:21:53.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "snowman.h",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowman.h",
+              "RelativeDocumentMoniker": "projet code game JAM\\snowman.h",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowman.h",
+              "RelativeToolTip": "projet code game JAM\\snowman.h",
+              "ViewState": "AgIAABQAAAAAAAAAAAAtwBkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-13T12:36:09.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "crabe.h",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\crabe.h",
+              "RelativeDocumentMoniker": "projet code game JAM\\crabe.h",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\crabe.h",
+              "RelativeToolTip": "projet code game JAM\\crabe.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-14T14:47:25.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "collision.h",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\collision.h",
+              "RelativeDocumentMoniker": "projet code game JAM\\collision.h",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\collision.h",
+              "RelativeToolTip": "projet code game JAM\\collision.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T14:21:37.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "money.h",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\money.h",
+              "RelativeDocumentMoniker": "projet code game JAM\\money.h",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\money.h",
+              "RelativeToolTip": "projet code game JAM\\money.h",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-14T08:57:38.426Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 307,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\main.c",
+              "RelativeDocumentMoniker": "projet code game JAM\\main.c",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\main.c",
+              "RelativeToolTip": "projet code game JAM\\main.c",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-14T08:36:23.85Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ui.c",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\ui.c",
+              "RelativeDocumentMoniker": "projet code game JAM\\ui.c",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\ui.c",
+              "RelativeToolTip": "projet code game JAM\\ui.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-24T14:17:59.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "snowball.c",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowball.c",
+              "RelativeDocumentMoniker": "projet code game JAM\\snowball.c",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowball.c",
+              "RelativeToolTip": "projet code game JAM\\snowball.c",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-18T09:12:25.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "game.c",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\game.c",
+              "RelativeDocumentMoniker": "projet code game JAM\\game.c",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\game.c",
+              "RelativeToolTip": "projet code game JAM\\game.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-17T09:29:34.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "snowman.c",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowman.c",
+              "RelativeDocumentMoniker": "projet code game JAM\\snowman.c",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\snowman.c",
+              "RelativeToolTip": "projet code game JAM\\snowman.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-14T14:49:38.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "crabe.c",
+              "DocumentMoniker": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\crabe.c",
+              "RelativeDocumentMoniker": "projet code game JAM\\crabe.c",
+              "ToolTip": "D:\\SVN\\Eleves\\dcrapoulet\\Programmation CSFML\\projet\\projet codegame JAM\\projet code game JAM\\crabe.c",
+              "RelativeToolTip": "projet code game JAM\\crabe.c",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAEAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-14T14:47:38.396Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -17,9 +17,33 @@ sfSprite* createSnowmanIcone(sfTexture* texture, float _x, float _y)
 	sfSprite* snowman = sfSprite_create();
 	sfSprite_setTexture(snowman, texture, sfFalse);
 	sfSprite_setPosition(snowman, (sfVector2f) { _x, _y });
+	sfSprite_setScale(snowman, (sfVector2f) { 3, 3 });
 
 	return snowman;
 	
+}
+
+void life(sfRenderWindow* window, HP* hp)
+{
+	
+	sfSprite* nbHeart[N_HEARTS];
+	sfTexture* heart = sfTexture_createFromFile("assets/Sprites/heart.png", NULL);
+	for (int i = 0; i < N_HEARTS; i++)
+	{
+		nbHeart[i] = sfSprite_create();
+		sfSprite_setTexture(nbHeart[i], heart, sfTrue);
+		sfSprite_setPosition(nbHeart[i], (sfVector2f) { 985, 300 + (90 * i) });
+		sfSprite_setScale(nbHeart[i], (sfVector2f) { 0.5f, 0.5f });
+	}
+
+	for (int i = 2; i >= hp->life; --i)
+		sfSprite_setColor(nbHeart[i], sfBlack);
+
+	for (int i = 0; i < N_HEARTS; ++i)
+		sfRenderWindow_drawSprite(window, nbHeart[i], NULL);
+
+	
+
 }
 
 void drawMoney(sfRenderWindow* window, Money* money)

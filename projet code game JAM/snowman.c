@@ -35,6 +35,7 @@ void newSnowman()
 	sfSprite_setTexture(newSnowman->sprite, snowman_texture, sfTrue);
 	newSnowman->image = sfTexture_copyToImage(snowman_texture);
 	sfSprite_setOrigin(newSnowman->sprite, (sfVector2f) { 0, 0 });
+	sfSprite_setScale(newSnowman->sprite, (sfVector2f) { 3, 3 });
 	newSnowman->hp = 100;
 	newSnowman->alive = sfTrue;
 

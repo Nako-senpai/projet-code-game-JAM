@@ -28,16 +28,21 @@ typedef struct {
 	sfSprite* snowmanIcone;
 	sfTexture* snowmanTexture;
 	GameState state;
+
+	sfSprite* backScreen;
+	sfTexture* fond;
+
+	int life;
 }Game;
 
 
 
-void initGame(Game* game, Money* money, SnowmanIconeID* iconeID);
+void initGame(Game* game, Money* money, SnowmanIconeID* iconeID, HP* hp);
 void handleEvent(Game* game);
-void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID);
-void drawGame(Game* game, Money* money);
+void updateGame(Game* game, Money* money, SnowmanIconeID* iconeID, HP* hp);
+void drawGame(Game* game, Money* money, HP* hp);
 void updateMenu(Game* game);
 void drawMenu(Game* game);
 void cleanupGame(Game* game);
-
+void life(sfRenderWindow* window, HP* hp);
 #endif

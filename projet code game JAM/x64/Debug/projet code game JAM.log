@@ -1,0 +1,10 @@
+﻿  game.c
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(8,8): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(25,52): warning C4047: 'fonction' : les niveaux d'indirection de 'sfBool' et de 'void *' sont différents
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(25,52): warning C4024: 'sfSprite_setTexture' : types différents pour le paramètre formel et réel 3
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(11,28): warning C4244: 'initialisation' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(11,35): warning C4244: 'initialisation' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(60,14): warning C4090: 'initialisation' : différents qualificateurs 'const'
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(62,35): warning C4244: 'initialisation' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\projet code game JAM\game.c(62,66): warning C4244: 'initialisation' : conversion de 'float' en 'unsigned int', perte possible de données
+  projet code game JAM.vcxproj -> D:\SVN\Eleves\dcrapoulet\Programmation CSFML\projet\projet codegame JAM\x64\Debug\projet code game JAM.exe
